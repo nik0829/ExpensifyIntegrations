@@ -45,7 +45,6 @@ public class ExpensifyIntegrationsService {
 
             HttpPost httpPost = new HttpPost(environment.getProperty("expensify.url"));
             httpPost.setEntity(entity);
-            System.out.println("Executing request " + httpPost.getRequestLine());
 
             ResponseHandler<String> responseHandler = response -> {
                 int status = response.getStatusLine().getStatusCode();
@@ -75,7 +74,6 @@ public class ExpensifyIntegrationsService {
 
             HttpPost httpPost = new HttpPost(environment.getProperty("expensify.url"));
             httpPost.setEntity(entity);
-            System.out.println("Executing request " + httpPost.getRequestLine());
 
             ResponseHandler<String> responseHandler = response -> {
                 int status = response.getStatusLine().getStatusCode();
@@ -101,7 +99,6 @@ public class ExpensifyIntegrationsService {
                     list.add(obj);
                 }
             }
-            System.out.println(list);
 
         } catch (IOException e) {
             e.printStackTrace();
